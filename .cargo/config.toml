@@ -1,0 +1,7 @@
+[alias]
+phasorflow = "run --bin PhasorFlow --all-features"
+hypeword = "run --bin HypeWord --all-features"
+viyline = "run --bin ViyLine --all-features"
+
+[build]
+target-dir = "Releases/Build"

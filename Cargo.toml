@@ -1,0 +1,133 @@
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+[package]
+name = "Protostar"
+version = "2022.12.11"
+edition = "2021"
+authors = ["Tremeschin"]
+description = "Broken Source Software's Monorepo"
+repository = "https://github.com/BrokenSource/Protostar"
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+[lib]
+name = "Protostar"
+path = "Protostar/Protostar.rs"
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# HypeWord project
+[[bin]]
+name = "HypeWord"
+path = "HypeWord/HypeWord.rs"
+required-features = [
+    "ndarray"
+]
+
+# PhasorFlow project
+[[bin]]
+name = "PhasorFlow"
+path = "PhasorFlow/PhasorFlow.rs"
+required-features = [
+    "ndarray"
+]
+
+# ShaderFlow project
+[[bin]]
+name = "ShaderFlow"
+path = "ShaderFlow/ShaderFlow.rs"
+required-features = [
+    "ndarray",
+    "egui"
+]
+
+# ViyLine project
+[[bin]]
+name = "ViyLine"
+path = "ViyLine/ViyLine.rs"
+required-features = [
+    "egui"
+]
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# Define features for dependencies. WASM doesn't have directories, for example, and
+# not all project needs ndarray-linalg
+
+[features]
+egui = ["dep:egui", "dep:eframe"]
+ndarray = ["dep:ndarray", "dep:ndarray-linalg"]
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+[dependencies]
+# dashmap = "5.4.0"
+# display = "0.1.2"
+# indicatif = {version = "0.17.1", features = ["improved_unicode", "in_memory"]}
+# names = "0.14.0"
+# permutator = "0.4.3"
+# thiserror = "1.0.37"
+
+# # Base
+
+# Math
+libm = "0.2.5"
+num = "0.4.0"
+chrono = "0.4.22"
+itertools = "0.10.5"
+unordered-pair = "0.2.4"
+
+# Serialization / Data Structures
+toml = "0.5.9"
+serde = {version="1.0.145", features=["derive"]}
+serde_derive = "1.0.145"
+serde_json = "1.0.86"
+strum = {version="0.24.1", features=["derive"]}
+strum_macros = "0.24.3"
+
+# Logging / CLI
+clap = {version="4.0.10", features=["derive", "color", "error-context", "suggestions", "usage"]}
+fern = {version="0.6.1", features=["chrono", "colored", "date-based"]}
+log = "0.4.17"
+
+# Feature: [ndarray]
+ndarray = {version="0.15.6", optional=true}
+ndarray-linalg = {version="0.16.0", optional=true, features=["intel-mkl-static"]}
+
+# Feature: [egui]
+eframe = {version="0.19.0", optional=true, features=["persistence"]}
+egui = { version = "0.19.0", optional = true, features = ["persistence"] }
+
+# # Others
+tempfile = "3.3.0"
+lru-cache = "0.1.2"
+serialport = "4.2.0"
+btleplug = {git="https://github.com/deviceplug/btleplug", rev="176ab343d26d60dc365c3bf9dc37f3931f4370d7"}
+# btleplug = "0.10.4"
+tokio = { version = "1.23.0", features = ["macros", "rt"] }
+async-std = "1.12.0"
+futures = "0.3.25"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+rust-embed = "6.4.1"
+directories = "4.0.1"
+tracing-subscriber = "0.3"
+
+# skia-bindings = { version = "0.55.0", features = ["gl"] }
+# cairo-rs = { version = "0.15.12", features = ["freetype", "pdf", "png", "win32-surface", "svg", "xcb", "xlib"] }
+# wgpu = { version = "0.14.0", features = ["webgl"] }
+
+# # Unsorted Dependencies
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+[profile.ultra]
+inherits = "release"
+panic = "abort"
+opt-level = 3
+strip = true
+lto = true
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
