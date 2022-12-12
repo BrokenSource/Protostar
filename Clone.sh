@@ -5,7 +5,7 @@ if [ -z $(which rustup 2> /dev/null) ]; then
     curl -sSL https://sh.rustup.rs | sh -s -- -y
 fi
 
-# Windows fix to find rustup
+# Windows fix to find rustup, shouldn't do much on unix
 export PATH=$PATH:$USERPROFILE/.cargo/bin
 
 # Download Rust stable

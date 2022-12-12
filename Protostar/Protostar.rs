@@ -51,10 +51,9 @@ pub fn setupLog() {
     fern::Dispatch::new()
         .format(move |out, message, record| {
             out.finish(format_args!(
-                "[{green}{:<6} µs | {:<43}{reset}]─[{level}{:<5}{reset}] ⏵ {}",
+                "[{green}{:<6} µs{reset}]─[{level}{:<5}{reset}] ⏵ {}",
                 // start.elapsed().as_millis(),
                 start.elapsed().as_micros(),
-                record.target(),
                 record.level(),
                 message,
                 level = format_args!("\x1B[{}m", logColors.get_color(&record.level()).to_fg_str()),
