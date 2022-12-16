@@ -3,7 +3,7 @@
 
 [package]
 name = "Protostar"
-version = "2022.12.11"
+version = "2022.12.14"
 edition = "2021"
 authors = ["Tremeschin"]
 description = "Broken Source Software's Monorepo"
@@ -103,8 +103,6 @@ egui = { version = "0.19.0", optional = true, features = ["persistence"] }
 tempfile = "3.3.0"
 lru-cache = "0.1.2"
 serialport = "4.2.0"
-btleplug = {git="https://github.com/deviceplug/btleplug", rev="176ab343d26d60dc365c3bf9dc37f3931f4370d7"}
-# btleplug = "0.10.4"
 tokio = { version = "1.23.0", features = ["macros", "rt"] }
 async-std = "1.12.0"
 futures = "0.3.25"
