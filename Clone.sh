@@ -8,6 +8,8 @@ fi
 # Fix to find rustup as PATH doesn't update
 export PATH=$PATH:$USERPROFILE/.cargo/bin:$CARGO_HOME/bin
 
+source $CARGO_HOME/env
+
 # Download Rust stable
 rustup default stable
 
