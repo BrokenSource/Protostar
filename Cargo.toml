@@ -2,8 +2,8 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 [package]
-name = "Protostar"
-version = "2022.12.14"
+name = "BrokenSource"
+version = "2022.12.18"
 edition = "2021"
 authors = ["Tremeschin"]
 description = "Broken Source Software's Monorepo"
