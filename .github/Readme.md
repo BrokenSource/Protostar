@@ -38,7 +38,7 @@
 <div align="center">
 
   ```ps
-  curl -sSL https://github.com/BrokenSource/Protostar/raw/Master/Clone.sh | sh
+  curl -sSL https://raw.githubusercontent.com/BrokenSource/Protostar/Master/Clone.sh | sh
   ```
 </div>
 <sub><i><b>Continue</b> reading...</i></sub>
@@ -58,7 +58,7 @@
 <div align="center">
 
   ```ps
-  curl -sSL https://github.com/BrokenSource/Protostar/raw/Master/Clone.sh | sh
+  curl -sSL https://raw.githubusercontent.com/BrokenSource/Protostar/Master/Clone.sh | sh
   ```
 </div>
 
