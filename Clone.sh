@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/sh
 
 # # Install Rustup if not found
 if [ -z $(which rustup 2> /dev/null) ]; then
@@ -29,5 +29,8 @@ projects=(
 for project in "${projects[@]}"; do
     git submodule update --init $project
 done
+
+# Just in case we miss a repo?
+git submodule update
 
 printf "\n:: Now type (cd Protostar) and run projects with (cargo projectName)"
