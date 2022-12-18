@@ -27,9 +27,7 @@ projects=(
 # Init submodules
 for project in "${projects[@]}"; do
     git submodule init $project
+    git submodule update $project
 done
-
-# Download contents of submodules
-git submodule update
 
 printf "\n:: Now type (cd Protostar) and run projects with (cargo projectName)"
