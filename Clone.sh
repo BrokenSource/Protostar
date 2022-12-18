@@ -21,7 +21,7 @@ projects=(
     # "HypeWord"
     # "PhasorFlow"
     # "ShaderFlow"
-    # "ViyLine"
+    "ViyLine"
 )
 
 # Init submodules
