@@ -1,7 +1,8 @@
 [alias]
+harper = "run --bin Harper"
+hypeword = "run --bin HypeWord"
 phasorflow = "run --bin PhasorFlow --all-features"
-hypeword = "run --bin HypeWord --all-features"
-viyline = "run --bin ViyLine --all-features"
+viyline = "run --bin ViyLine"
 
 [build]
 target-dir = "Releases/Build"

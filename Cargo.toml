@@ -17,6 +17,11 @@ path = "Protostar/Protostar.rs"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
+# Harper project
+[[bin]]
+name = "Harper"
+path = "Harper/Harper.rs"
+
 # HypeWord project
 [[bin]]
 name = "HypeWord"
@@ -103,6 +108,9 @@ egui = { version = "0.19.0", optional = true, features = ["persistence"] }
 tempfile = "3.3.0"
 lru-cache = "0.1.2"
 serialport = "4.2.0"
+
+# MIDI Files
+midly = "0.5.3"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 rust-embed = "6.4.1"

@@ -13,3 +13,6 @@
 [submodule "ViyLine"]
 	path = ViyLine
 	url = https://github.com/BrokenSource/ViyLine
+[submodule "Harper"]
+	path = Harper
+	url = https://github.com/BrokenSource/Harper
