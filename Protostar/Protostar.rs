@@ -1,4 +1,4 @@
-// | (c) 2022 Tremeschin, AGPLv3-only License | Protostar Project | //
+// | (c) Tremeschin, AGPLv3-only License | Protostar Project | //
 #![allow(non_snake_case)]
 #![crate_type = "lib"]
 
