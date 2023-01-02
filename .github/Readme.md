@@ -82,9 +82,15 @@ Run projects with the following command:
 
 *<b>Where</b> (project):*
 
+- `harper`: Secret
+
+- `hypeword`: Secret
+
 - `phasorflow`: Simplified equations for Newton-Raphson Power Flow and a new State of the Art Backwards Forwards Sweep-Like Asyncronous Sweep Power Flow that works for Meshed Grids implemented in Rust. **(Not OSS yet)**
 
-- `viyline`: Solar panel IV curve tracker, a DIY physical circuit project. **(Not OSS yet)**
+- `shaderflow`: [Modular Music Visualizer](https://github.com/Tremeschin/ModularMusicVisualizer) rewrite. Early stages.
+
+- `viyline`: Solar panel IV curve tracker, a DIY physical circuit project using PIC16F877A.
 
 *<b>NOTE:</b> Most projects have a built-in CLI with help, but it's always good to check the original repository for specific instructions if any.*
 
