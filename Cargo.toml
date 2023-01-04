@@ -1,5 +1,5 @@
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# ------------------------------------------------------------------------------------------------|
 
 [package]
 name = "BrokenSource"
@@ -9,18 +9,21 @@ authors = ["Tremeschin"]
 description = "Broken Source Software's Monorepo"
 repository = "https://github.com/BrokenSource/Protostar"
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# ------------------------------------------------------------------------------------------------|
 
 [lib]
 name = "Protostar"
 path = "Protostar/Protostar.rs"
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# ------------------------------------------------------------------------------------------------|
 
 # Harper project
 [[bin]]
 name = "Harper"
 path = "Harper/Harper.rs"
+required-features = [
+    "egui"
+]
 
 # HypeWord project
 [[bin]]
@@ -55,7 +58,7 @@ required-features = [
     "egui"
 ]
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# ------------------------------------------------------------------------------------------------|
 
 # Define features for dependencies. WASM doesn't have directories, for example, and
 # not all project needs ndarray-linalg
@@ -64,7 +67,7 @@ required-features = [
 egui = ["dep:egui", "dep:eframe"]
 ndarray = ["dep:ndarray", "dep:ndarray-linalg"]
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# ------------------------------------------------------------------------------------------------|
 
 [dependencies]
 # dashmap = "5.4.0"
@@ -111,6 +114,7 @@ serialport = "4.2.0"
 
 # MIDI Files
 midly = "0.5.3"
+bincode = "1.3.3"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 rust-embed = "6.4.1"
@@ -124,7 +128,7 @@ tracing-subscriber = "0.3"
 # # Unsorted Dependencies
 
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# ------------------------------------------------------------------------------------------------|
 
 [profile.ultra]
 inherits = "release"
@@ -133,4 +137,4 @@ opt-level = 3
 strip = true
 lto = true
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# ------------------------------------------------------------------------------------------------|

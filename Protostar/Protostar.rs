@@ -13,6 +13,8 @@ pub use std::fs::File;
 pub use std::io::BufReader;
 pub use std::io::BufWriter;
 pub use std::io::Write;
+pub use std::io::Read;
+pub use std::net::{TcpListener, TcpStream};
 pub use std::path::PathBuf;
 pub use std::process::exit;
 pub use std::process::Command as Subprocess;
@@ -51,7 +53,7 @@ pub fn setupLog() {
     fern::Dispatch::new()
         .format(move |out, message, record| {
             out.finish(format_args!(
-                "[{green}{:<6} µs{reset}]─[{level}{:<5}{reset}] ⏵ {}",
+                "[{green}{:<6} µs{reset}]─[{level}{:<5}{reset}] ▸ {}",
                 // start.elapsed().as_millis(),
                 start.elapsed().as_micros(),
                 record.level(),
